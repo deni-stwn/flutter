@@ -1,0 +1,33 @@
+class ModelSuratKuasa {
+  String? namaPemberi,
+      tptLahirPemberi,
+      tglLahirPemberi,
+      jKelaminPemberi,
+      noKtpPemberi,
+      alamatPemberi,
+      namaPenerima,
+      tptLahirPenerima,
+      tglLahirPenerima,
+      jKelaminPenerima,
+      noKtpPenerima,
+      alamatPenerima,
+      keperluan,
+      tempatTerbit,
+      tglTerbitl;
+  ModelSuratKuasa(
+      {required this.namaPemberi,
+      required this.tptLahirPemberi,
+      required this.tglLahirPemberi,
+      required this.jKelaminPemberi,
+      required this.noKtpPemberi,
+      required this.alamatPemberi,
+      required this.namaPenerima,
+      required this.tptLahirPenerima,
+      required this.tglLahirPenerima,
+      required this.jKelaminPenerima,
+      required this.noKtpPenerima,
+      required this.alamatPenerima,
+      required this.keperluan,
+      required this.tempatTerbit,
+      required this.tglTerbitl});
+}
