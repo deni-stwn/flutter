@@ -1,5 +1,4 @@
 import 'package:e_letter/Screen/activity/activity_viewModel.dart';
-import 'package:e_letter/helper/database_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +15,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       Provider.of<ActivityViewModel>(context, listen: false).getAllActivity();
     });
   }

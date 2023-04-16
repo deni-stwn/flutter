@@ -18,7 +18,7 @@ class _ContentListState extends State<ContentList> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       Provider.of<ContentViewModel>(context, listen: false).getContentFromApi();
     });
   }
@@ -70,59 +70,54 @@ class _ContentListState extends State<ContentList> {
                                         paragraf3: contentProvider
                                             .content[index].paragraf3!)));
                           },
-                          child: Container(
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: 100,
-                                  width: 150,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, top: 5, bottom: 5),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(5),
-                                      child: Image.network(
-                                        contentProvider.content[index].gambar!,
-                                        fit: BoxFit.cover,
-                                      ),
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                height: 100,
+                                width: 150,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 10, top: 5, bottom: 5),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(5),
+                                    child: Image.network(
+                                      contentProvider.content[index].gambar!,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
-                                const SizedBox(
-                                  width: 17,
+                              ),
+                              const SizedBox(
+                                width: 17,
+                              ),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(
+                                    right: 8.0, bottom: 8, top: 8),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(contentProvider.content[index].header!,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      contentProvider.content[index].body!,
+                                      maxLines: 3,
+                                      textAlign: TextAlign.justify,
+                                      overflow: TextOverflow.ellipsis,
+                                    )
+                                  ],
                                 ),
-                                Expanded(
-                                    child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      right: 8.0, bottom: 8, top: 8),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                          contentProvider
-                                              .content[index].header!,
-                                          style:const TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.black,
-                                          ),
-                                          textAlign: TextAlign.start),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Text(
-                                        contentProvider.content[index].body!,
-                                        maxLines: 3,
-                                        textAlign: TextAlign.justify,
-                                        overflow: TextOverflow.ellipsis,
-                                      )
-                                    ],
-                                  ),
-                                ))
-                              ],
-                            ),
+                              ))
+                            ],
                           ),
                         ),
                       ),
