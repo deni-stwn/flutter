@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:e_letter/Screen/home/all_menu.dart';
 import 'package:e_letter/Screen/surat_umum/form_surat_kuasa.dart';
 import 'package:e_letter/Widgets/header_carousel.dart';
@@ -26,8 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
         SafeArea(
           child: ListView(
             children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              const Padding(
+                  padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                   child: CarouselWithIndicator()
                   //
                   ),

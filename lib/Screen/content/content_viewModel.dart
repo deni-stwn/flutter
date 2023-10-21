@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:e_letter/Api/content_api.dart';
 import 'package:e_letter/Model/content/content_model.dart';
 import 'package:flutter/cupertino.dart';

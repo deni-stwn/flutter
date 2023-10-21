@@ -6,12 +6,16 @@ class CardMenu extends StatelessWidget {
   final IconData leading;
 
   const CardMenu(
-      {required this.desc, required this.leading, required this.title});
+      {Key? key,
+      required this.desc,
+      required this.leading,
+      required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: size.height * 0.12,
       child: Card(
         shape: RoundedRectangleBorder(

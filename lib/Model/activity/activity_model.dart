@@ -1,4 +1,4 @@
-final String tableActivity = 'activities';
+const String tableActivity = 'activities';
 
 class ActivityFields {
   static final List<String> values = [
@@ -6,9 +6,9 @@ class ActivityFields {
     id, title, date
   ];
 
-  static final String id = '_id';
-  static final String title = 'title';
-  static final String date = 'date';
+  static const String id = '_id';
+  static const String title = 'title';
+  static const String date = 'date';
 }
 
 class ActivityModel {

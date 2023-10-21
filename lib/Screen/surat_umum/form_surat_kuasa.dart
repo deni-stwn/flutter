@@ -129,6 +129,7 @@ class _SuratKuasaScreenState extends State<SuratKuasaScreen> {
                                           if (value == null || value.isEmpty) {
                                             return 'Data tidak boleh kosong';
                                           }
+                                          return null;
                                         }),
                                   ),
                                   const SizedBox(
@@ -194,6 +195,7 @@ class _SuratKuasaScreenState extends State<SuratKuasaScreen> {
                                           if (value == null || value.isEmpty) {
                                             return 'Data tidak boleh kosong';
                                           }
+                                          return null;
                                         }),
                                   ),
                                   const SizedBox(

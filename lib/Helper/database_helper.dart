@@ -24,8 +24,8 @@ class DatabaseHelper {
   }
 
   Future _createDB(Database db, int version) async {
-    final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
-    final textType = 'TEXT NOT NULL';
+    const idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
+    const textType = 'TEXT NOT NULL';
 
     await db.execute('''
     CREATE TABLE $tableActivity ( 
@@ -72,7 +72,7 @@ class DatabaseHelper {
   Future<List<ActivityModel>> readAllActivity() async {
     final db = await instance.database;
 
-    final orderBy = '${ActivityFields.id} ASC';
+    const orderBy = '${ActivityFields.id} ASC';
     // final result =
     //     await db.rawQuery('SELECT * FROM $tableActivityModels ORDER BY $orderBy');
 

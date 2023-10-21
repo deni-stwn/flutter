@@ -13,7 +13,6 @@ class ActivityScreen extends StatefulWidget {
 class _ActivityScreenState extends State<ActivityScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       Provider.of<ActivityViewModel>(context, listen: false).getAllActivity();

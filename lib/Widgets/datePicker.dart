@@ -1,12 +1,19 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class DatePicker extends StatefulWidget {
   var controller = TextEditingController();
   String? label;
   String? hintText;
   DatePicker(
-      {required this.controller, required this.label, required this.hintText});
+      {Key? key,
+      required this.controller,
+      required this.label,
+      required this.hintText})
+      : super(key: key);
 
   @override
   State<DatePicker> createState() => _DatePickerState();

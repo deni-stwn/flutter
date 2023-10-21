@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:e_letter/Model/activity/activity_model.dart';
 import 'package:e_letter/helper/database_helper.dart';
 import 'package:flutter/cupertino.dart';
